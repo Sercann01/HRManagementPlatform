@@ -1,0 +1,138 @@
+﻿@using HRManagement.ViewModel.PackageVM
+@model List<PackageVM>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="mb-3">Paketler </h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+             <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                   
+                    @{
+                        Dictionary<int, PackageVM> deneme = new Dictionary<int, PackageVM>();
+                        int count = 0;
+                        @foreach(var item in Model)
+                                {
+                            deneme.Add(count, item);
+                            count++;
+                        }
+                        double doubleCount = count / 3;
+                        <div class="carousel-inner">
+                        @for(int j=0;j<doubleCount+1;j++)
+                       {
+                           @if (j==0)
+                          {
+                              <div class="carousel-item active">
+                                <div class="row">
+                                    @for (var i = 0; i < 3; i++)
+                                    {
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100x280" src="@deneme[i].ImageURL">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">@deneme[i].Name</h4>
+                                                    <p class="card-text">@deneme[i].Price ₺</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div> 
+                          }
+                          @if (j>0)
+                         {
+                              <div class="carousel-item">
+                                <div class="row">
+                                    @for (var i = j*3; i < 3*(j+1); i++)
+                                    {
+                                        @if (deneme.Count==i)
+                                                {
+                                                    break;
+                                                }
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" alt="100x280" src="@deneme[i].ImageURL">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">@deneme[i].Name</h4>
+                                                    <p class="card-text">@deneme[i].Price ₺</p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                         }
+                          
+                       }
+
+                       
+                           
+                        
+
+                            @*foreach (var item in deneme)
+                            //{
+                            //    if (item.Key % 3 == 0)
+                            //    {
+                            //        <div class="carousel-item">
+                            //            <div class="row">
+                            //                @for (var i = 0; i < 3; i++)
+                            //                {
+                            //                    <div class="col-md-4 mb-3">
+                            //                        <div class="card">
+                            //                            <img class="img-fluid" alt="100%x280" src="@item.Value.ImageURL">
+                            //                            <div class="card-body">
+                            //                                <h4 class="card-title">@item.Value.Name</h4>
+                            //                                <p class="card-text">@item.Value.Price</p>
+
+                            //                            </div>
+
+                            //                        </div>
+                            //                    </div>
+                            //                }
+                            //            </div>
+                            //        </div>
+                            //    }
+
+
+                            //}*@
+
+
+
+
+
+
+
+                           
+
+                   
+
+
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

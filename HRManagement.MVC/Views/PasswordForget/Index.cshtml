@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using HRManagement.ViewModel.UserViewModels
+@model UserLoginVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="~/Sifre.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="login-icon">
+            <i class="glyphicon glyphicon-tint"></i> Purple
+
+        </div>
+        <div class="login-form">
+            <div class="login-title">
+                Yeni Şifre Oluştur
+            </div>
+            <form asp-action="Index" asp-controller="PasswordForget" method="post">
+                <div class="login-input-parts">
+                    <input input asp-for="Password" class="login-input" placeholder="Şifre" />
+                    <span asp-validation-for="Password" class="form-text text-muted bg-danger"></span>
+                    <input input asp-for="Password" class="login-input" placeholder="Şifre Tekrar" />
+                    <span asp-validation-for="Password" class="form-text text-muted bg-danger"></span>
+                    <button class="login-input " type="submit">Kaydet</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="login-signup">
+            <a asp-action="Index" asp-controller="Login">Ana Sayfa</a>
+        </div>
+    </div>
+</body>
+</html>

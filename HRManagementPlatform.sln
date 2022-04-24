@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRManagement.UI.MVC", "HRManagement.MVC\HRManagement.UI.MVC.csproj", "{F91CC640-6BC2-48AA-8D2D-C89947AA4C1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Core", "HRManagement.Core\HRManagement.Core.csproj", "{4BD4ACF4-0D6E-45DC-9C6B-3291346B74A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.Model", "HRManagement.Model\HRManagement.Model.csproj", "{B8C1CC80-7663-4165-AF8D-4EEAE7F651B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.BLL", "HRManagement.BLL\HRManagement.BLL.csproj", "{78B2872F-D53C-4A7A-A851-2DF6BA490FC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.DAL", "HRManagement.DAL\HRManagement.DAL.csproj", "{5A375F8F-862E-4530-9457-8A560FCD6257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRManagement.ViewModel", "HRManagement.ViewModel\HRManagement.ViewModel.csproj", "{D748F12E-8CC0-4FE9-A624-D03D12FF3EBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F91CC640-6BC2-48AA-8D2D-C89947AA4C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91CC640-6BC2-48AA-8D2D-C89947AA4C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91CC640-6BC2-48AA-8D2D-C89947AA4C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91CC640-6BC2-48AA-8D2D-C89947AA4C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD4ACF4-0D6E-45DC-9C6B-3291346B74A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD4ACF4-0D6E-45DC-9C6B-3291346B74A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD4ACF4-0D6E-45DC-9C6B-3291346B74A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD4ACF4-0D6E-45DC-9C6B-3291346B74A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C1CC80-7663-4165-AF8D-4EEAE7F651B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C1CC80-7663-4165-AF8D-4EEAE7F651B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C1CC80-7663-4165-AF8D-4EEAE7F651B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C1CC80-7663-4165-AF8D-4EEAE7F651B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B2872F-D53C-4A7A-A851-2DF6BA490FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B2872F-D53C-4A7A-A851-2DF6BA490FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B2872F-D53C-4A7A-A851-2DF6BA490FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B2872F-D53C-4A7A-A851-2DF6BA490FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A375F8F-862E-4530-9457-8A560FCD6257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A375F8F-862E-4530-9457-8A560FCD6257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A375F8F-862E-4530-9457-8A560FCD6257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A375F8F-862E-4530-9457-8A560FCD6257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D748F12E-8CC0-4FE9-A624-D03D12FF3EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D748F12E-8CC0-4FE9-A624-D03D12FF3EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D748F12E-8CC0-4FE9-A624-D03D12FF3EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D748F12E-8CC0-4FE9-A624-D03D12FF3EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5734D1E0-F2DE-40C2-B7BA-9360C48061C5}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/atayserdar
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HRManagement.MVC\\HRManagement.UI.MVC.csproj
+		SccProjectName1 = HRManagement.MVC
+		SccLocalPath1 = HRManagement.MVC
+		SccProjectUniqueName2 = HRManagement.Core\\HRManagement.Core.csproj
+		SccProjectName2 = HRManagement.Core
+		SccLocalPath2 = HRManagement.Core
+		SccProjectUniqueName3 = HRManagement.Model\\HRManagement.Model.csproj
+		SccProjectName3 = HRManagement.Model
+		SccLocalPath3 = HRManagement.Model
+		SccProjectUniqueName4 = HRManagement.BLL\\HRManagement.BLL.csproj
+		SccProjectName4 = HRManagement.BLL
+		SccLocalPath4 = HRManagement.BLL
+		SccProjectUniqueName5 = HRManagement.DAL\\HRManagement.DAL.csproj
+		SccProjectName5 = HRManagement.DAL
+		SccLocalPath5 = HRManagement.DAL
+		SccProjectUniqueName6 = HRManagement.ViewModel\\HRManagement.ViewModel.csproj
+		SccProjectName6 = HRManagement.ViewModel
+		SccLocalPath6 = HRManagement.ViewModel
+	EndGlobalSection
+EndGlobal

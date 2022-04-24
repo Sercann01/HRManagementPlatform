@@ -1,0 +1,74 @@
+﻿@using HRManagement.ViewModel.UserViewModels
+
+
+@model List<UserListVM>
+
+@foreach (var item in Model)
+{
+
+    <tr>
+        <td>
+            <div class="d-flex align-items-center">
+                <img src="@item.ImageURL"
+                 alt=""
+                 style="width: 45px; height: 45px"
+                 class="rounded-circle" />
+                <div class="ms-3">
+                    <p class="fw-bold mb-1">@item.FirstName @item.LastName</p>
+                </div>
+            </div>
+        </td>
+
+        <td>
+            <p class="fw-normal mb-1"><a href="mailto:@item.Email">@item.Email</a></p>
+
+        </td>
+
+        <td>
+            <p class="fw-normal mb-1">@item.BirthDate.ToString().Split(' ')[0]</p>
+
+        </td>
+        <td>
+            <p class="fw-normal mb-1">@item.Depertmant</p>
+
+        </td>
+        <td>
+            <p class="fw-normal mb-1">@item.Title</p>
+        </td>
+
+        <td>
+            <p class="fw-normal mb-1">@item.PhoneNumber</p>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">@item.StartDate.ToString().Split(' ')[0]</p>
+        </td>
+        <td>
+
+
+            <select style="width: 75px;" asp-for="@item.ID" class="form-control" id="f4">
+                <option value="true">Aktif</option>
+                <option value="false">Pasif</option>
+            </select>
+
+
+
+        </td>
+        <td>
+
+
+            <a asp-controller="admin" asp-action="userdetail" asp-route-id="@item.ID">
+                <button type="button" class="btn btn-primary btn-sm">Detay</button>
+            </a>  <br />
+            <a asp-controller="admin" asp-action="updateuser" asp-route-id="@item.ID">
+                <button type="button" class="btn btn-primary btn-sm">Güncelle</button>
+            </a>
+
+
+        </td>
+
+    </tr>
+}
+
+
+
+

@@ -1,0 +1,27 @@
+﻿@using HRManagement.Model.Enums
+@using HRManagement.ViewModel.CompanyViewModel
+
+@model List<CompanyVM>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.TaxId</td>
+        <td>@item.RegisterDate.ToShortDateString()</td>
+        <td>@item.DatePurchased.ToShortDateString()</td>
+        <td>@item.Address</td>
+        <td>@Enum.GetName(typeof(CompanyType),item.CompanyType)</td>
+        <td>@item.PackageId</td>
+        
+
+
+        <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                @* <button type="button" class="btn btn-secondary"> <a asp-action="Delete" asp-controller="Admin" asp-route-id="@item.Id">Delete</a></button>
+                    <button type="button" class="btn btn-secondary"> <a asp-action="Edit" asp-controller="Admin" asp-route-id="@item.Id">Edit</a></button>*@
+            </div>
+        </td>
+    </tr>
+}
+

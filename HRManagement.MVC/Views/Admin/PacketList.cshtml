@@ -1,0 +1,68 @@
+﻿@using HRManagement.ViewModel.PackageVM
+@model List<PackageVM>
+@{
+    ViewData["Title"] = "PacketList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/packetTable/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/packetTable/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/packetTable/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/packetTable/css/style.css">
+
+    <title>Table #7</title>
+</head>
+<body>
+
+
+    <div class="content">
+
+        <div class="container">
+            <h2 class="mb-5">Packet List</h2>
+
+            <div class="table-responsive">
+
+                <table class="table table-striped custom-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Kullanım Süresi</th>
+                            <th scope="col">Paket Adı</th>
+                            <th scope="col">Fiyat</th>
+                            <th scope="col">Paket Başlangıç Tarihi</th>
+                            <th scope="col">Paket Bitiş Tarihi</th>
+                            <th scope="col">Paket Durumu</th>                         
+                           
+                        </tr>
+                    </thead>
+                    <tbody id="tableData">
+                        <partial name="_AdminPackageTable" model="@Model" />
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="~/packetTable/js/jquery-3.3.1.min.js"></script>
+    <script src="~/packetTable/js/popper.min.js"></script>
+    <script src="~/packetTable/js/bootstrap.min.js"></script>
+    <script src="~/packetTable/js/main.js"></script>
+</body>
+</html>

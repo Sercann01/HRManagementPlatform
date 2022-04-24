@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using HRManagement.ViewModel.UserViewModels
+@model UserLoginVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="~/login.css" />
+    @*<link rel="stylesheet" href="~/PopUp.css" />*@
+</head>
+<body>
+    <div class="container">
+        <div class="login-icon">
+            <i class="glyphicon glyphicon-tint"></i>
+
+        </div>
+        <div class="login-form">
+            <div class="login-title">
+                Giriş Yap
+            </div>
+            <form asp-action="Index" asp-controller="Login" method="post">
+                <div class="login-input-parts">
+                    <input asp-for="Email" class="login-input" placeholder="Email " />
+                    <span asp-validation-for="Email" class="form-text text-muted bg-danger"></span>
+                    <input input asp-for="Password" class="login-input" placeholder="Şifre" />
+                    <span asp-validation-for="Password" class="form-text text-muted bg-danger"></span>
+                    <input asp-for="IsRemember" type="checkbox">
+                    <label asp-for="IsRemember">Beni Hatırla</label>
+                    <button class="login-input " type="submit">Giriş</button>
+                    <a href="#modal-opened" class="link-1" id="modal-closed">Şifremi Unuttum</a>
+                </div>
+            </form>
+            @await Html.PartialAsync("ForgetPassword")
+
+        </div>
+        <div class="login-signup">
+            <a asp-action="Index" asp-controller="Home">Ana Sayfa</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+<!--<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome Back</h3>-->
+<!-- Login Form -->
+<!--<div class="login-form">
+                        <form asp-action="Index" asp-controller="Login" method="post">
+                            <div class="form-group">
+
+                                <label asp-for="Email"></label>
+                                <input asp-for="Email" class="form-control">
+                                <span asp-validation-for="Email" class="form-text text-muted bg-danger"></span>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label asp-for="Password"></label>
+                                <input asp-for="Password" type="text" class="form-control">
+                                <span asp-validation-for="Password" class="form-text text-muted bg-danger"></span>
+                            </div>
+
+                            <div class="form-group form-check">
+                                <input asp-for="IsRemember" type="checkbox" class="form-check-input">
+                                <label asp-for="IsRemember">Beni Hatırla</label>
+                            </div>
+
+                            <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->

@@ -1,0 +1,37 @@
+﻿@using HRManagement.ViewModel.PackageVM
+
+
+@model List<PackageVM>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Duration</td>
+        <td>@item.Name</td>
+        <td>@item.Price ₺</td>
+        <td>@item.StartDate.ToShortDateString()</td>
+        <td>@item.EndDate.ToShortDateString()</td>
+
+        @{
+            if (@item.IsActive)
+            {
+
+                <td>Aktif</td>
+            }
+            else
+            {
+                <td>Pasif</td>
+            }
+        }
+
+
+
+        <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                @* <button type="button" class="btn btn-secondary"> <a asp-action="Delete" asp-controller="Admin" asp-route-id="@item.Id">Delete</a></button>
+                    <button type="button" class="btn btn-secondary"> <a asp-action="Edit" asp-controller="Admin" asp-route-id="@item.Id">Edit</a></button>*@
+            </div>
+        </td>
+    </tr>
+}
+

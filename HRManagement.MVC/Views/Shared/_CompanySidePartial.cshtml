@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Http;
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                    <img src="@Context.Session.GetString("UserImage").ToString()" alt="profile">
+                    <span class="login-status online"></span>
+                    <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">@Context.Session.GetString("UserName")</span>
+                    <span class="text-secondary text-small">@Context.Session.GetString("UserRole")</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-action="Index" asp-controller="CompanyManager">
+                <span class="menu-title">Ana Sayfa</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">
+                    Personel
+                </span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a asp-action="AddUser" asp-controller="CompanyManager" class="nav-link">Personel Ekle</a></li>
+                    <li class="nav-item"> <a asp-action="UserList" asp-controller="CompanyManager" class="nav-link">Personel Listesi</a></li>
+                </ul>
+            </div>
+        </li>
+      
+    
+    </ul>
+</nav>

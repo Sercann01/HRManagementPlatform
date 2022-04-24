@@ -1,0 +1,37 @@
+﻿@using HRManagement.ViewModel.UserViewModels
+@model UserLoginVM
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="~/PopUp.css" />
+</head>
+<body>
+    <a href="#modal-opened" class="link-1" id="modal-closed">Şifremi Unuttum</a>
+
+    <div class="modal-container" id="modal-opened">
+        <div class="modal">
+
+            <form asp-action="ForgetPassword" asp-controller="Login" method="post">
+                <div class="login-input-parts">
+                    <input input asp-for="Email" class="login-input" placeholder="Email" />
+                    <span asp-validation-for="Email" class="form-text text-muted bg-danger"></span>
+                    
+                    <button class="login-input " type="submit">Kaydet</button>
+                </div>
+            </form>        
+
+            <button class="modal__btn">Gönder &rarr;</button>
+
+            <a href="#modal-closed" class="link-2"></a>
+
+        </div>
+    </div>
+       
+</body>
+</html>
